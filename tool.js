@@ -33,7 +33,7 @@ button1.style.width = "225px";
 button2.style.width = "225px";
 button1.innerHTML = "本页全部+拦截弹窗";
 button2.innerHTML = "下一页";
-document.querySelector("body > div > main > div > div > div.py-2.opacity-80.lg\\:py-6").prepend(button1);
 document.querySelector("body > div > main > div > div > div.py-2.opacity-80.lg\\:py-6").prepend(button2);
+document.querySelector("body > div > main > div > div > div.py-2.opacity-80.lg\\:py-6").prepend(button1);
 document.getElementById("thispageall").addEventListener("click", clickall);
 document.getElementById("nextall").addEventListener("click", nextpage);
