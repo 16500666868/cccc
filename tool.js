@@ -31,9 +31,31 @@ tooldiv.style.width = "110px";
 tooldiv.style.height = "140px";
 tooldiv.style.backgroundColor = "#4fc4e5";
 tooldiv.style.zIndex = '99999';
-document.body.append(tooldiv);
-tooldiv.innerHTML="<h1 style='width: 100&;text-align: center;font-size: larger'>辅助</h1>\n" +
-    "<button id='thispageall' style='border: #336600'>一键此页+阻止弹窗</button>\n" +
-    "<button id='nextall'  style='border: #336600'>下一页</button>\n" ;
+tooldiv.style.borderRadius = "8px"; // 圆角边框
+tooldiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)"; // 添加阴影
+tooldiv.style.padding = "10px"; // 内边距
+tooldiv.style.fontFamily = "Arial, sans-serif"; // 设置字体
+document.querySelector("body > div > main > div").append(tooldiv);
+tooldiv.innerHTML="<h1 style=\"width: 100%; text-align: center; font-size: larger; margin: 0;\">辅助</h1>\n" +
+    "<button id=\"thispageall\" class=\"tool-button\">一键此页+阻止弹窗</button><br>" +
+    "<button id=\"nextall\"  class=\"tool-button\"  >下一页</button>\n"+
+"\n<style>" +
+    "    .tool-button {\n" +
+    "        width: 100%;\n" +
+    "        margin: 5px 0;\n" +
+    "        padding: 10px;\n" +
+    "        background-color: #336600;\n" +
+    "        color: white;\n" +
+    "        border: none;\n" +
+    "        border-radius: 4px;\n" +
+    "        cursor: pointer;\n" +
+    "        font-size: 10px;\n" +
+    "        transition: background-color 0.3s ease;\n" +
+    "    }\n" +
+    "\n" +
+    "    .tool-button:hover {\n" +
+    "        background-color: #254d00;\n" +
+    "    }\n" +
+    "</style>";
 document.getElementById("thispageall").addEventListener("click", clickall);
 document.getElementById("nextall").addEventListener("click", nextpage);
